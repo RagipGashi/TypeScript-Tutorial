@@ -14,4 +14,7 @@
 - undefined
 - any -> is parent class (Object) root class for all the others
 
+- **Interesting is the union type**
+  - Ex. const msg:number|string; - means msg variable could be of type number or string
+
 
