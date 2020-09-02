@@ -16,6 +16,7 @@ x = 'Hello World!!' //-> doesn't work: Type '"Hello World!!"' is not assignable 
 console.log(x);
 */
 
+/*
 // Another example with union types
 function myAdd (x: string | number, y: string | number): number {
     if (typeof x == 'string') {
@@ -27,3 +28,12 @@ function myAdd (x: string | number, y: string | number): number {
     return x + y;
 }
 console.log(myAdd(4, '4'));
+*/
+
+type cardinalDirection = 'North' | 'East' | 'South' | 'West';
+
+function move (distance: number, direction: cardinalDirection) {
+    console.log('Moving ' + distance + ' Miles in direction ' + direction);
+}
+move(5, 'South');
+// move(5, 'South-East'); // -> doesn't work: Argument of type '"South-East"' is not assignable to parameter of type 'cardinalDirection'.
