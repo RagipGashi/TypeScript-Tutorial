@@ -10,6 +10,7 @@
 - Static defined, each time we define a variable, we must declare what type of variable is
 - It works through Node.js
 
+
 ## Data types:
 - string
 - number
@@ -25,6 +26,7 @@
 - **Interesting is the union type**
   - Ex. const msg:number|string; - means msg variable could be of type number or string
 
+
 ## Object-based Classes
 - TypeScript offers the ability to use classes in JavaScript
   - Object Oriented Behavior
@@ -34,3 +36,6 @@
   - Access Modifiers - Public, Private, Protected
 
 
+## Types void, undefined, null and never
+- void means that the function doesn't return anything, the same is never too (almost)
+- null and undefined can return those two types, but not any string or number
