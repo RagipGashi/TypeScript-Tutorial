@@ -24,7 +24,6 @@ console.log(x);
 console.log(y);
 console.log(z);
 console.log(w);
-*/
 
 //// Multiple arguments, multiple types
 function myGenericFunc<T1, T2> (arg1, arg2) {
@@ -43,3 +42,13 @@ function myGeneric<T> (arg1: T, arg2: T) {
 
 let y = myGeneric('Hello', 'World'); 
 console.log(y);
+*/
+
+//// ARRAYS
+function myGeneric<T> (arg: T[]): T[] {
+    console.log(arg.length);
+    return arg;
+}
+
+let arr = myGeneric([1, 2, 3]);
+console.log(arr);

@@ -24,18 +24,29 @@ console.log(x);
 console.log(y);
 console.log(z);
 console.log(w);
-*/
+
 //// Multiple arguments, multiple types
-function myGenericFunc(arg1, arg2) {
-    var str = arg1 + ' ' + arg2;
+function myGenericFunc<T1, T2> (arg1, arg2) {
+    let str =  arg1 + ' ' + arg2;
     return str;
 }
-var x = myGenericFunc('Hello', 40);
+
+let x = myGenericFunc('Hello', 40);
 console.log(x);
+
 //// Using multiple types and arguments, but only with one type, <T>. Now in call we must pass the same type like in the first arg.
-function myGeneric(arg1, arg2) {
-    var str = arg1 + ' ' + arg2;
+function myGeneric<T> (arg1: T, arg2: T) {
+    let str =  arg1 + ' ' + arg2;
     return str;
 }
-var y = myGeneric('Hello', 'World');
+
+let y = myGeneric('Hello', 'World');
 console.log(y);
+*/
+//// ARRAYS
+function myGeneric(arg) {
+    console.log(arg.length);
+    return arg;
+}
+var arr = myGeneric([1, 2, 3]);
+console.log(arr);
