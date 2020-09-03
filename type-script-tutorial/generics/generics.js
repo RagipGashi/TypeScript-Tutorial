@@ -12,5 +12,10 @@ function myGenericFunc(arg) {
 }
 var x = myGenericFunc('Hello World!');
 var y = myGenericFunc(40);
+// With generics, it is possible to pass any type of argument without declaring it!!!
+var z = myGenericFunc('Hello');
+var w = myGenericFunc(44.44);
 console.log(x);
 console.log(y);
+console.log(z);
+console.log(w);

@@ -15,5 +15,11 @@ function myGenericFunc<T> (arg: T): T {
 
 let x = myGenericFunc<string> ('Hello World!');
 let y = myGenericFunc<number> (40);
+// With generics, it is possible to pass any type of argument without declaring it!!!
+let z = myGenericFunc('Hello');
+let w = myGenericFunc(44.44);
+
 console.log(x);
 console.log(y);
+console.log(z);
+console.log(w);
