@@ -19,7 +19,7 @@ interface User extends Membership{
 }
 
 interface Membership {
-    type: string;
+    type?: string;
 }
 
 function displayName(user: User) {
