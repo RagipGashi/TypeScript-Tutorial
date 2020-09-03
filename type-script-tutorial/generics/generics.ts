@@ -42,7 +42,6 @@ function myGeneric<T> (arg1: T, arg2: T) {
 
 let y = myGeneric('Hello', 'World'); 
 console.log(y);
-*/
 
 //// ARRAYS
 function myGeneric<T> (arg: T[]): T[] {
@@ -52,3 +51,16 @@ function myGeneric<T> (arg: T[]): T[] {
 
 let arr = myGeneric([1, 2, 3]);
 console.log(arr);
+*/
+
+//// INTERFACE
+interface MyGenericFn {
+    <T> (arg: T): T;
+}
+
+function myGeneric<T> (arg: T): T {
+    return arg;
+}
+
+let x: MyGenericFn = myGeneric;
+console.log(x('Hello')); // as an argument, here we can pass string or number or...

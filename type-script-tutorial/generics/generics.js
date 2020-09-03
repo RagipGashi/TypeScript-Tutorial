@@ -42,11 +42,18 @@ function myGeneric<T> (arg1: T, arg2: T) {
 
 let y = myGeneric('Hello', 'World');
 console.log(y);
-*/
+
 //// ARRAYS
-function myGeneric(arg) {
+function myGeneric<T> (arg: T[]): T[] {
     console.log(arg.length);
     return arg;
 }
-var arr = myGeneric([1, 2, 3]);
+
+let arr = myGeneric([1, 2, 3]);
 console.log(arr);
+*/
+function myGeneric(arg) {
+    return arg;
+}
+var x = myGeneric;
+console.log(x('Hello')); // as an argument, here we can pass string or number or...
