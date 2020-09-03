@@ -1,4 +1,3 @@
-"use strict";
 //// USING A SIMPLE FUNCTION
 /*
 function displayName (user: {firstName: string, lastName: string}) {
@@ -8,23 +7,43 @@ function displayName (user: {firstName: string, lastName: string}) {
 let myUser = {firstName: 'John', lastName: 'Doe'};
 
 displayName(myUser);
-*/
-exports.__esModule = true;
-function displayName(user) {
-    if (user.email) {
-        console.log(user.firstName + " " + user.lastName + " - " + user.email);
-    }
-    else {
-        console.log(user.firstName + " " + user.lastName);
-    }
-    if (user.type) {
-        console.log(user.firstName + ' has a ' + user.type + ' membership.');
-    }
+
+import { formatWithCursor } from "prettier";
+
+//// USING INTERFACE
+interface User extends Membership{
+  firstName: string;
+  lastName: string;
+  email?: string; // If we want to insert another feature but make it as NOT REQUIRED we just put a ? and we don't get an error!!!
 }
-var myUser = {
-    firstName: "John",
-    lastName: "Doe",
-    email: "john@gmail.com",
-    type: 'Gold'
+
+interface Membership {
+    type?: string;
+}
+
+function displayName(user: User) {
+  if (user.email) {
+    console.log(user.firstName + " " + user.lastName + " - " + user.email);
+  } else {
+    console.log(user.firstName + " " + user.lastName);
+  }
+  if (user.type) {
+    console.log(user.firstName + ' has a ' + user.type + ' membership.');
+  }
+}
+
+let myUser = {
+  firstName: "John",
+  lastName: "Doe",
+  email: "john@gmail.com",
+  type: 'Gold',
 };
+
 displayName(myUser);
+*/
+//// IMPLEMENT THAT INTERFACE
+var getUser;
+getUser = function (myName, myAge) {
+    return myName + ' is ' + myAge + ' years old.';
+};
+console.log(getUser('John', 40));

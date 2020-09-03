@@ -7,7 +7,6 @@ function displayName (user: {firstName: string, lastName: string}) {
 let myUser = {firstName: 'John', lastName: 'Doe'};
 
 displayName(myUser);
-*/
 
 import { formatWithCursor } from "prettier";
 
@@ -41,3 +40,17 @@ let myUser = {
 };
 
 displayName(myUser);
+*/
+
+//// CREATE AN INTERFACE TO DISPLAY THE NAME AND THE AGE
+interface userFunc {
+    (name: string, age: number): string;
+}
+
+//// IMPLEMENT THAT INTERFACE
+let getUser: userFunc;
+getUser = (myName, myAge) => {
+    return myName + ' is ' + myAge + ' years old.';
+}
+
+console.log(getUser('John', 40));
