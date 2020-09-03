@@ -39,3 +39,9 @@
 ## Types void, undefined, null and never
 - void means that the function doesn't return anything, the same is never too (almost)
 - null and undefined can return those two types, but not any string or number
+
+
+## Using interfaces
+- Interfaces make the code more functional
+- Interfaces can be extended to use features of each other
+- They must be extended if we want to use features of others. Devided with a comma, an interface can extend as many other interfaces as it wants.
