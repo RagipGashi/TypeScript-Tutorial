@@ -17,14 +17,18 @@
 - Boolean
 - null
 - undefined
-- any -> is parent class (Object) root class for all the others. It essentially disable type checking.
+- any -> **is parent class (Object) root class for all the others. It essentially disable type checking.**
 - void - no type returned
 - Tuple - Array with fixed number of elements
 - Enums - enumerated values
 - Generics - specify type constraints. Great for reuse
 
 - **Interesting is the union type**
-  - Ex. const msg:number|string; - means msg variable could be of type number or string
+  - Example:
+```
+const msg:number|string;
+```
+  - means msg variable could be of type number or string
 
 
 ## Object-based Classes
