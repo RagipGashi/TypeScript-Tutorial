@@ -27,5 +27,26 @@ function showLet() {
 }
 //showLet();
 
+/*
+//// VAR in a loop. 
+for (var i = 0; i < 5; i++) {
+    console.log('In loop: ' + i);
+}
+console.log(i); // Here we get 5, var declared variables are known out of the loop scope too
 
+//// LET in a loop. 
+for (let i = 0; i < 5; i++) {
+    console.log('In loop: ' + i);
+}
+//console.log(i); // Here we get an error, LET declared variables are NOT known out of the loop scope: error TS2304: Cannot find name 'i'.
+*/
+
+//// CONST declared variables
+const colors = [];
+colors.push('red');
+colors.push('blue');
+
+//colors = []; // If we try to change the const declard variable we get an error: error TS2588: Cannot assign to 'colors' because it is a constant.
+
+console.log(colors);
 

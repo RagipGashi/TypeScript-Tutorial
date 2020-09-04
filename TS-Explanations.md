@@ -49,6 +49,12 @@
 
 ## Using generics
 - Generics make possible to pass any type of argument if we don't declare it inside <>
-``` function myFunc<T>(arg: T): T { return arg;}
+``` 
+function myFunc<T>(arg: T): T { return arg;}
 ```
+
+## Difference of using VAR and LET and CONST
+- var declared variables are accessable out of the scope of a function for example, or out of the scope of the loop
+- let declared variable are the oposite of this. They are just inside the scope of the loop accessable and known, but if we try to access them out of the loop or out of the if() condition, we will get an error saying 'Cannot find name 'i''.
+- const declared variables are constant, it means if we declare once and try to change its values, we will get an error saying: Cannot assign to 'xy' because it is a constant.
 
