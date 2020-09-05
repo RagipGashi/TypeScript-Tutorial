@@ -108,6 +108,6 @@ in typescript. ${num1} + ${num2} = ${total(num1, num2)}`;
 console.log(template); 
 // Output:
 Hello World, This is my template 
-in typescript. 5 + 3 = 8 
+in typescript. 5 + 3 = 8
 ```
-- We can use some methods in a template too, like startsWith(), endsWith() or includes().
+- We can use some methods in a template too, like **startsWith()**, **endsWith()** or **includes()**.
