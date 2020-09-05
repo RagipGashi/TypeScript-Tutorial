@@ -70,6 +70,7 @@ let add (num1: number, num2: number): number {
   return num1 + num2;
 }
 ```
+- The same code with **arrow function**
   - Arrow function:
 ```
 const add = (num1: number, num2: number): number => num1 + num2;
