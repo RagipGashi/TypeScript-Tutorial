@@ -21,7 +21,21 @@ console.log(user2);
 // Using mach pattern
 const [a, b] = ['x', 'y'];
 console.log(a);
+
+const obj = {a: [{foo: 123, bar: 'abc'}, {}], b: true};
+const {a: [{bar: b}]} = obj;
+//console.log(b);
+
+const {x: x, y: y} = {x: 12, y: 22};
+console.log(y);
 */
-var obj = { a: [{ foo: 123, bar: 'abc' }, {}], b: true };
-var b = obj.a[0].bar;
-console.log(b);
+// If there is no match, than we get UNDEFINED 
+// const [x] = [];
+// console.log(x);
+// const {prop: y} = {};
+// console.log(y);
+// Here we set some values to the array and object too to get a result
+var _a = [][0], x = _a === void 0 ? 5 : _a;
+console.log(x);
+var _b = {}.prop, y = _b === void 0 ? 6 : _b;
+console.log(y);
