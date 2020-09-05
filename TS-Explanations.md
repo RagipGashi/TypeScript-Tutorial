@@ -90,3 +90,24 @@ const {firstName, lastName} = user;
 
 console.log(firstName + ' ' + lastName);
 ```
+
+## Using templates
+- If we want a declared template to split in two lines or use some variables in it, we must use backtick (`) instead of quotes (') and then just before the variable use dollar sign ($). In a template can be used a function too:
+```
+const greet = 'Hello World';
+const num1 = 5;
+const num2 = 3;
+
+// Using a function in template
+const total = (num1: number, num2: number): number => num1 + num2;
+
+// Creating a template
+const template = `${greet}, This is my template 
+in typescript. ${num1} + ${num2} = ${total(num1, num2)}`;
+
+console.log(template); 
+// Output:
+Hello World, This is my template 
+in typescript. 5 + 3 = 8 
+```
+- We can use some methods in a template too, like startsWith(), endsWith() or includes().
