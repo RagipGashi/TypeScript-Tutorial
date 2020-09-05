@@ -62,6 +62,7 @@ function myFunc<T>(arg: T): T { return arg;}
 - **let** declared variable are the oposite of this. They are just inside the scope of the loop accessable and known, but if we try to access them out of the loop or out of the if() condition, we will get an error saying **Cannot find name 'i'**
 - **const** declared variables are constant, it means if we declare once and try to change its values, we will get an error saying: **Cannot assign to 'xy' because it is a constant.**
 
+
 ## Arrow function
 - Arrow functions makes the code clen and use lexical THIS
   - Old style:
@@ -76,3 +77,16 @@ let add (num1: number, num2: number): number {
 const add = (num1: number, num2: number): number => num1 + num2;
 ```
 - Arrow functions with **only one expression** don't need an explicit return, just like in case above. 
+
+
+## Destructuring - Extracting values
+- It is used to extract values from an object or an array:
+```
+const user = {
+    firstName: 'UserName',
+    lastName: 'UserLastname',
+}
+const {firstName, lastName} = user;
+
+console.log(firstName + ' ' + lastName);
+```
