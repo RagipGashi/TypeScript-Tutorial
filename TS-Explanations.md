@@ -111,3 +111,11 @@ Hello World, This is my template
 in typescript. 5 + 3 = 8
 ```
 - We can use some methods in a template too, like **startsWith()**, **endsWith()** or **includes()**.
+
+
+## Access modifiers
+- In TypeScript we have three access modifiers:
+  - public
+  - private
+  - protected
+- By default all functions and variables are public, so it is the same if we use the keyword public before the function or variable or not, it will be always public. 
