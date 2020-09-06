@@ -123,3 +123,5 @@ in typescript. 5 + 3 = 8
 - **private** means that it could be accessable only inside of the class in which the function or propertie is declared. 
   - If we want to use them out of the class, we need to use setter and getter methods. 
 - **protected** means that it is accessable only within the class and its subclasses. 
+
+- **static member** is accessable inside the class and in its instatiation
