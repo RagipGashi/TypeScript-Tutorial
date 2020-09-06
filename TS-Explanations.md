@@ -115,7 +115,11 @@ in typescript. 5 + 3 = 8
 
 ## Access modifiers
 - In TypeScript we have three access modifiers:
-  - public
-  - private
-  - protected
-- By default all functions and variables are public, so it is the same if we use the keyword public before the function or variable or not, it will be always public. 
+  - **public**
+  - **private**
+  - **protected**
+- By default all functions and properties are public, so it is the same if we use the keyword public before the function or properties or not, it will be always public. 
+- **public** means that it could be accessable from anywhere, in the class, out of the class and from any inherited class too. 
+- **private** means that it could be accessable only inside of the class in which the function or propertie is declared. 
+  - If we want to use them out of the class, we need to use setter and getter methods. 
+- **protected** means that it is accessable only within the class and its subclasses. 
