@@ -1,3 +1,4 @@
+export {}
 /*
 //// Using strict type of argument and the return type of the function
 function myStrictFunc (arg: string): string {

@@ -1,3 +1,4 @@
+export {}
 //// DESTRUCTURING is used to constract data values from Object or Arrays etc.
 // Destructuring data values from an Object:
 /*

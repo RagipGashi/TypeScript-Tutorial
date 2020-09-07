@@ -1,3 +1,4 @@
+export {}
 // Create a class
 class Person {
     firstName: string;
