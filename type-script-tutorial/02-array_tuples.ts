@@ -26,12 +26,10 @@ console.log(z);
  console.log(y);
  */
 
-/*
- /////TUPPLES
+/////TUPPLES
 let x: [string, number];
 
 //x = ['Hello', 'World'];
-x = ['Hello', 5];
+x = ["Hello", 5];
 
 console.log(x[0].substr(1));
-*/

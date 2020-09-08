@@ -35,17 +35,17 @@ var User = {
 var ragip = Object.create(User);
 ragip.startAging();
 
-// Arrow function -> it elleminates self. and it is more ellegant, so it makes cleaner code and use lexical THIS
-let User = {
-    name: 'Ragip Gashi', 
-    age: 40,
-    startAging: function() {
-        setInterval(() => {
-            this.age++;
-            console.log(this.age);
-        }, 1000)
-    }
-}
-let ragip = Object.create(User);
-ragip.startAging();
 */
+// Arrow function -> it elleminates self. and it is more ellegant, so it makes cleaner code and use lexical THIS
+const User = {
+  name: "Ragip Gashi",
+  age: 40,
+  startAging: function () {
+    setInterval(() => {
+      this.age++;
+      console.log(this.age);
+    }, 1000);
+  },
+};
+const ragip = Object.create(User);
+ragip.startAging();
