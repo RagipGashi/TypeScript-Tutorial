@@ -26,7 +26,7 @@ console.log(z);
  console.log(y);
  */
 
- /*
+/*
  /////TUPPLES
 let x: [string, number];
 

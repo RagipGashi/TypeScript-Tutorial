@@ -1,3 +1,4 @@
+export {};
 /*
 class Animal {
     // By default all properties and functions are public, even if we declare them as public or not
@@ -44,33 +45,32 @@ console.log(dog.getName());
 
 // Using protected access modifier
 class Animal {
-    // If we use protected, means we can have access within the class, and the classes that extends that class
-    protected name: string;
+  // If we use protected, means we can have access within the class, and the classes that extends that class
+  protected name: string;
 
-    constructor (name: string) {
-        this.name = name;
-    }
+  constructor(name: string) {
+    this.name = name;
+  }
 
-    // Using getter method
-    getName() {
-        return this.name; 
-    }
+  // Using getter method
+  getName() {
+    return this.name;
+  }
 
-    // Using setter method
-    setName(name: string) {
-        this.name = name;
-    }
+  // Using setter method
+  setName(name: string) {
+    this.name = name;
+  }
 }
 
 // Create another class which extends Animal class to see the usage of protected modifier
 class Dog extends Animal {
-
-    constructor(name: string) {
-        // super must we write to call the constructor in the parent class
-        super(name);
-        console.log(this.name);
-    }
+  constructor(name: string) {
+    // super must we write to call the constructor in the parent class
+    super(name);
+    console.log(this.name);
+  }
 }
 
 // Instantiate the class Dog which extends Animal
-const dog: Animal = new Dog('Ralph');
+const dog: Animal = new Dog("Ralph");

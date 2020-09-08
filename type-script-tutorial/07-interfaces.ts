@@ -2,7 +2,7 @@
 /*
 function displayName (user: {firstName: string, lastName: string}) {
     console.log(user.firstName + ' ' + user.lastName);
-}
+} 
 
 let myUser = {firstName: 'John', lastName: 'Doe'};
 
@@ -41,9 +41,16 @@ let myUser = {
 
 displayName(myUser);
 */
+
+//// CREATE AN INTERFACE TO DISPLAY THE NAME AND THE AGE
+interface userFunc {
+  (name: string, age: number): string;
+}
+
 //// IMPLEMENT THAT INTERFACE
-var getUser;
-getUser = function (myName, myAge) {
-    return myName + ' is ' + myAge + ' years old.';
+let getUser: userFunc;
+getUser = (myName, myAge) => {
+  return myName + " is " + myAge + " years old.";
 };
-console.log(getUser('John', 40));
+
+console.log(getUser("John", 40));

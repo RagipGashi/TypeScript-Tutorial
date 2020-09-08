@@ -29,13 +29,13 @@ console.log(paycheck);
 // let x: any;
 
 // x = 'Hello';
-// x = 12; 
+// x = 12;
 // x = true;
 
 let x: any[]; // Declaring array of type ANY
 let y: Array<any>;
 
 x = [1, 2, 3];
-y = ['Hello', 'World', 12];
+y = ["Hello", "World", 12];
 
 console.log(y);

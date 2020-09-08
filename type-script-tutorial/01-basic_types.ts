@@ -25,12 +25,11 @@ let x: string;
 //x = 5;                            // Doesn't work, x is not a number
 */
 
-
 ////BOOLEANS////
 let x: boolean;
 
 // x = true;
-// x = false; 
+// x = false;
 // x = undefined;
 // x = null;
 // x = 5;

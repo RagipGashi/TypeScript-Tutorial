@@ -30,10 +30,10 @@ function myAdd (x: string | number, y: string | number): number {
 console.log(myAdd(4, '4'));
 */
 
-type cardinalDirection = 'North' | 'East' | 'South' | 'West';
+type cardinalDirection = "North" | "East" | "South" | "West";
 
-function move (distance: number, direction: cardinalDirection) {
-    console.log('Moving ' + distance + ' Miles in direction ' + direction);
+function move(distance: number, direction: cardinalDirection) {
+  console.log("Moving " + distance + " Miles in direction " + direction);
 }
-move(5, 'South');
+move(5, "South");
 // move(5, 'South-East'); // -> doesn't work: Argument of type '"South-East"' is not assignable to parameter of type 'cardinalDirection'.
