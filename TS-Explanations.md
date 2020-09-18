@@ -3,7 +3,7 @@
 **What is TypeScript:**
 
 - TypeScript is a superset of JavaScript that compiles to plain JavaScript
-- Existing JavaScript programs are alos valid TypeScript
+- Existing JavaScript programs are also valid TypeScript
 - TypeScript is open source and was created and is maintained by Microsoft
 - It was designed for development of large applications
 - tsc is a compliler that compiles TypeScript in JavaScript and it is written in TypeScript
