@@ -3,25 +3,46 @@
 **What is TypeScript:**
 
 - TypeScript is a superset of JavaScript that compiles to plain JavaScript
-- Existing JavaScript programs are alos valid TypeScript
-- TypeScript is open source and was created and is maintained by Microsoft
+- Static defined, each time we define a variable, we must declare what type of variable it is
+
+**JavaScript:**
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+```
+
+**TypeScript:**
+
+```javascript
+function add(a: number, b: number): number {
+  return a + b;
+}
+```
+
 - It was designed for development of large applications
+
+- Existing JavaScript programs are also valid TypeScript
+- TypeScript is open source and was created and is maintained by Microsoft
 - tsc is a compliler that compiles TypeScript in JavaScript and it is written in TypeScript
-- Static defined, each time we define a variable, we must declare what type of variable is
-- It works through Node.js
 
 ## Data types:
 
-- string
-- number
-- Boolean
-- null
-- undefined
-- any -> **is parent class (Object) root class for all the others. It essentially disable type checking.**
-- void - no type returned
-- Tuple - Array with fixed number of elements
-- Enums - enumerated values
-- Generics - specify type constraints. Great for reuse
+- **primitives:**
+  - string
+  - number
+  - Boolean
+  - null
+  - undefined
+  - any -> **is parent class (Object) root class for all the others. It essentially disable type checking.**
+  - void - no type returned
+- **complex:**
+
+  - Tuple -> Array with multiple predifined types
+  - Enums -> enumerated values
+  - Unknown ->describe the type of variables that we do not know
+  - Generics -> specify type constraints. Great for reuse
 
 - **Interesting is the union type**
   - Example:
@@ -35,22 +56,101 @@ const msg:number|string;
 ## Object-based Classes
 
 - TypeScript offers the ability to use classes in JavaScript
+
   - Object Oriented Behavior
   - Move away from **prototype-based** inheritance
   - Better Encapsulation
   - Class Inheritance
   - Access Modifiers - Public, Private, Protected
 
+- Code compilation example:
+
+**typescript**
+
+```javascript
+function sortArrayElements(inputArray: Array<number>): Array<number> {
+  // Sort the elements of the array and save them to the result variable
+  const result = inputArray.sort((firstElement, secondElement) => {
+    return firstElement - secondElement;
+  });
+  return result;
+```
+
+**Javascript**
+
+```javascript
+function sortArrayElements(inputArray) {
+  // Sort the elements of the array and save them to the result variable
+  const result = inputArray.sort((firstElement, secondElement) => {
+    return firstElement - secondElement;
+  });
+  return result;
+}
+```
+
 ## Types void, undefined, null and never
 
-- void means that the function doesn't return anything, the same is never too (almost)
-- null and undefined can return those two types, but not any string or number
+- void -> the function doesn't return anything
+- never -> is used when you are sure that something is never going to occur
+
+```javascript
+function keepProcessing(): never {
+            while (true) {
+         console.log('I always do something and it never ends.')
+     }
+```
+
+- null and undefined can return each of those two types, but not any other type
+
+```javascript
+// Both null and undefined are only `==` to themselves and each other:
+console.log(null == null); // true (of course)
+console.log(undefined == undefined); // true (of course)
+console.log(null == undefined); // true
+```
 
 ## Using interfaces
 
-- Interfaces make the code more functional
-- Interfaces can be extended to use features of each other
-- They must be extended if we want to use features of others. Devided with a comma, an interface can extend as many other interfaces as it wants.
+- An interface is a syntactical contract that an entity should conform to.
+- Interfaces make the code reusable
+
+```javascript
+interface IPerson {
+  firstName: string;
+  lastName: string;
+  sayHi: () => string;
+}
+
+const customer: IPerson = {
+  firstName: "Tom",
+  lastName: "Hanks",
+  sayHi: (): string => {
+    return "Hi there";
+  },
+};
+```
+
+- If we want to use features of interfaces, we must inherit them. Devided with a comma, an interface can extend as many other interfaces as it wants.
+
+```javascript
+interface IPerson {
+  name: string;
+  gender: string;
+}
+interface ICitizen {
+  readonly SSN: number;
+}
+interface IEmployee extends IPerson, ICitizen {
+  empCode: number;
+}
+
+let empObj: IEmployee = {
+  empCode: 1,
+  name: 'Bill',
+  gender: 'Male',
+  SSN: 120,
+};
+```
 
 ## Using generics
 
@@ -62,11 +162,31 @@ function myFunc<T>(arg: T): T {
 }
 ```
 
-## Difference of using VAR and LET and CONST
+## Difference of VAR, LET and CONST
 
-- **var** declared variables are accessable out of the scope of a function for example, or out of the scope of the loop
-- **let** declared variable are the oposite of this. They are just inside the scope of the loop accessable and known, but if we try to access them out of the loop or out of the if() condition, we will get an error saying **Cannot find name 'i'**
-- **const** declared variables are constant, it means if we declare once and try to change its values, we will get an error saying: **Cannot assign to 'xy' because it is a constant.**
+### **var:**
+
+Declared variables are accessable globaly if declared outside of a function, and function scoped if declared inside a function
+
+```javascript
+{
+  var greeter = "hey hi";
+
+  function newFunction() {
+    var hello = "hello";
+  }
+}
+```
+
+Here, **greeter** is globally scoped because it exists outside a function while **hello** is function scoped. So we cannot access the variable hello outside of a function. So if we do this:
+
+### **let**
+
+declared variable are block scoped and their values are changable. If we access them out of scope we will get an error saying **Cannot find name 'i'**
+
+### **const**
+
+declared variables are also block scoped and their values are constant. This means if we declared them once and try to change its values, we will get an error saying: **Cannot assign to 'xy' because it is a constant.**
 
 ## Arrow function
 
@@ -133,9 +253,25 @@ in typescript. 5 + 3 = 8
   - **private**
   - **protected**
 - By default all functions and properties are public, so it is the same if we use the keyword public before the function or properties or not, it will be always public.
-- **public** means that it could be accessable from anywhere, in the class, out of the class and from any inherited class too.
-- **private** means that it could be accessable only inside of the class in which the function or propertie is declared.
-  - If we want to use them out of the class, we need to use setter and getter methods.
-- **protected** means that it is accessable only within the class and its subclasses.
 
-- **static member** is accessable inside the class and in its instatiation
+### **public**
+
+By default, members (properties and methods) of TypeScript class are public, so you don’t need to prefix members with the public keyword.
+
+- Public members are accessible everywhere without restrictions, means that it could be accessable from anywhere, in the class, out of the class and from any inherited class too.
+
+### **private**
+
+Means that it could be accessable only inside of the class in which the function or propertie is declared.
+
+- If we want to use them out of the class, we need to use **setter** and **getter** methods.
+
+### **protected**
+
+A protected member is only accessable within the class and its subclasses.
+
+### **static member**
+
+When we use the static keyword on properties we define on a class, they belong to the class itself, this means that we cannot access those properties from an instance of the class.
+
+- We can only access the properties directly by referencing the class itself.
