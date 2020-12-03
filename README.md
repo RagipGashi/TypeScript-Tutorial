@@ -1,6 +1,6 @@
 # TypeScript-Tutorial
 
-[TypeScript Tutorial](https://www.eduonix.com/new_dashboard/the-complete-typescript-programming-guide-for-web-developers)
+[Eduonix - TypeScript Tutorial](https://www.eduonix.com/new_dashboard/the-complete-typescript-programming-guide-for-web-developers)
 
 
 ## Installing and configuring jest for TypeScript
