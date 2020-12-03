@@ -15,7 +15,14 @@ tsc (fileName.ts)
 ```bash
 tsc (fileName.js) -w
 ```
-- Open another bash cmd
+
+- Install Nodemon 
+```bash
+npm install -g nodemon
+```
+[Node Monitor](https://nodemon.io) - Node reload, automatically
+
+- Open another bash cmd and type:
 ```bash
 nodemon (fileName)
 ```
