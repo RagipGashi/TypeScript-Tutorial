@@ -2,6 +2,25 @@
 
 [Eduonix - TypeScript Tutorial](https://www.eduonix.com/new_dashboard/the-complete-typescript-programming-guide-for-web-developers)
 
+# Getting Started
+
+- Assume that we have installed **Node.js**, **Git**, **VSCode** and created a folder where the codes will be saved.
+- After writing some codes in **TypeScript**,
+- Open `bash` and type:
+```bash
+tsc (fileName.ts)
+```
+- This command will **transpile** our **.ts** file in a **JavaScript** file, 
+- To make it reload automatically and watch the changes, use:
+```bash
+tsc (fileName.js) -w
+```
+- Open another bash cmd
+```bash
+nodemon (fileName)
+```
+- This bash command makes the **Node** to reload automatically after changes in file
+
 
 ## Installing and configuring jest for TypeScript
 
